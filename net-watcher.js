@@ -18,7 +18,7 @@ let watcher = fs.watch(filename, function() {
 });
 
 //cleanup
-connection.om('close', function() {
+connection.on('close', function() {
 	console.log('Subscriber disconnected.');
 	watcher.close();
 });
